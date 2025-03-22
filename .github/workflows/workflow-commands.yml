@@ -1,0 +1,18 @@
+name: "Workflow commands"
+
+on: [push]
+
+jobs:
+  exec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group loggin
+        run: |
+          echo "::group::My Group Messages"
+          echo "Msg1"
+          echo "Msg2"
+          echo "::endgroup::"
+      - name: export env vars
+        run: echo "::exportVariable hello::WORLD"
+      - name: read env vars
+        run: echo "world = $WORLD"
