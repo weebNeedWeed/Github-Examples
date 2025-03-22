@@ -5,10 +5,10 @@ on: [push]
 jobs:
   run:
     runs-on: ubuntu-latest
-    env:
-      MY_ACTION: ${{ github.action }}
-      MY_ACTOR: ${{ github.actor }}
     steps:
-      - run: |
+      - env:
+          MY_ACTION: ${{ github.action }}
+          MY_ACTOR: ${{ github.actor }}
+        run: |
           echo "${MY_ACTION}"
           echo "${MY_ACTOR}"
