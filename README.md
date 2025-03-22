@@ -9,4 +9,4 @@ https://kontent.ai/blog/how-to-trigger-github-action-using-webhook-with-no-code/
 ```yaml
 run: echo "Issue labels: ${{ join(github.event.issue.labels.*.name, ', ') }}"
 ```
-https://github.com/github/vscode-github-actions/issues/205
+https://github.com/github/vscode-github-actions/issues/205 
