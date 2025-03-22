@@ -1,0 +1,13 @@
+name: conditional
+
+on: [push]
+
+jobs:
+  run-if-matching-repo-name:
+    # if: github.repository == 'hello/world'
+    runs-on: ubuntu-latest
+    steps:
+      # if can be under steps or underneath the job
+      - if: github.repository == 'hello/world'
+        run: echo "Hello world"
+      - run: "Good Bye"
