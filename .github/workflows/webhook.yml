@@ -12,4 +12,4 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: run script
-        uses: echo "${GITHUB_EVENT_NAME}"
+        run: echo "${GITHUB_EVENT_NAME}"
